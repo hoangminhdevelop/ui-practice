@@ -1,0 +1,219 @@
+/* -- Variables --*/
+/* -- Core -- */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+   2. Remove default margin
+ */
+* {
+  margin: 0;
+}
+
+/*
+  Add font
+*/
+html {
+  font-family: "Roboto";
+  color: #232645;
+  font-weight: "normal";
+  font-size: 10px;
+}
+
+/*
+   Typographic tweaks!
+   3. Add accessible line-height
+   4. Improve text rendering
+ */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.8rem;
+}
+
+/*
+   5. Improve media defaults
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+   6. Remove built-in form typography styles
+ */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+   7. Avoid text overflows
+ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+   8. Create a root stacking context
+ */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* -- Component -- */
+/* -- Pages -- */
+@media screen and (min-width: 1024px) {
+  main {
+    background-color: #232645;
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.sign-up {
+  background-color: #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .sign-up {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 60%;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 2rem;
+  }
+}
+.sign-up__banner {
+  width: 100%;
+  height: 100%;
+}
+.sign-up__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sign-up__banner--mobile {
+  display: block;
+}
+.sign-up__banner--desktop {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .sign-up__banner {
+    width: 50%;
+  }
+  .sign-up__banner--mobile {
+    display: none;
+  }
+  .sign-up__banner--desktop {
+    display: block;
+    border-radius: 2rem;
+  }
+}
+.sign-up__body {
+  padding: 0 1.5rem;
+}
+.sign-up__title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.sign-up__sub-title {
+  margin-top: 2rem;
+}
+.sign-up__benefits {
+  margin-top: 2rem;
+  padding: 0;
+}
+.sign-up__benefits li {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  list-style: none;
+}
+.sign-up__benefits li:nth-child(n+1) {
+  margin-top: 1rem;
+}
+
+.sign-up-form {
+  margin-top: 2rem;
+}
+.sign-up-form__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.sign-up-form__error {
+  color: #f95e55;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.sign-up-form__label {
+  color: #232645;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.sign-up-form__input {
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+}
+.sign-up-form__input--js-error {
+  border: 2px solid #f95e55;
+  color: #f95378;
+}
+
+.btn {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background-color: #232645;
+  color: #ffffff;
+  padding: 1.5rem;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

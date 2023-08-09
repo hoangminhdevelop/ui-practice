@@ -1,0 +1,136 @@
+@use "../utils/medias" as media;
+
+$space-y: 2rem;
+$space-x: 1.5rem;
+
+main {
+  @include media.desktop {
+    background-color: $dark;
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.sign-up {
+  background-color: $white;
+
+  @include media.desktop {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 60%;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  &__banner {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include media.mobile {
+      &--mobile {
+        display: block;
+      }
+      &--desktop {
+        display: none;
+      }
+    }
+
+    @include media.desktop {
+      width: 50%;
+      &--mobile {
+        display: none;
+      }
+      &--desktop {
+        display: block;
+        border-radius: 2rem;
+      }
+    }
+  }
+
+  &__body {
+    padding: 0 $space-x;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: $space-y;
+  }
+
+  &__sub-title {
+    margin-top: $space-y;
+  }
+
+  &__benefits {
+    margin-top: $space-y;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 1rem;
+      list-style: none;
+      &:nth-child(n + 1) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.sign-up-form {
+  margin-top: $space-y;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $space-y;
+  }
+
+  &__error {
+    color: $primary;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__label {
+    color: $dark;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+
+    &--js-error {
+      border: 2px solid $primary;
+      color: $secondary;
+    }
+  }
+}
+
+.btn {
+  margin-top: $space-y;
+  border-radius: 1rem;
+  background-color: $dark;
+  color: $white;
+  padding: 1.5rem;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
